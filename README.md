@@ -1,5 +1,9 @@
 # MVP
+## Descrição do Projeto
+<p align="center">Escrever uma breve descrição</p>
 > :construction: Projeto em construção :construction:
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge
+
 # :hammer: Funcionalidades do projeto
 
 - `Funcionalidade 1`: descrição da funcionalidade 1
@@ -28,6 +32,11 @@
 * [Acesso ao Projeto](#acesso-ao-projeto)
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
 * [Pessoas Contribuidoras](#pessoas-contribuidoras)
-* [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras)
-* [Licença](#licença)
-* [Conclusão](#conclusão)
+
+### Features
+
+- [x] Cadastro de usuário
+- [x] Cadastro de cliente
+- [ ] Cadastro de produtos
+
+

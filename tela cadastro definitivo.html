@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário e Publicação - Editora Unifeso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 500px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #ddd;
+            cursor: pointer;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            color: #0d7c4d;
+            font-weight: bold;
+            border-right: 1px solid #ddd;
+        }
+
+        .tab:last-child {
+            border-right: none;
+        }
+
+        .tab.active {
+            background-color: #0d7c4d;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: #0d7c4d;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0d7c4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #09663d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tabs para alternar entre o cadastro de usuário e de publicação -->
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('userTab')">Cadastro de Usuário</div>
+            <div class="tab" id="pubTab" onclick="switchTab('publicationTab')" style="pointer-events: none; opacity: 0.5;">Cadastro de Publicação</div>
+        </div>
+
+        <!-- Conteúdo do Cadastro de Usuário -->
+        <div class="tab-content active" id="userTab">
+            <h2>Cadastro de Usuário</h2>
+            <form id="registrationForm">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="role">Tipo de Usuário:</label>
+                <select id="role" name="role" onchange="toggleAdminSection()" required>
+                    <option value="">Selecione...</option>
+                    <option value="admin">Administrador</option>
+                    <option value="student">Estudante</option>
+                </select>
+
+                <button type="submit">Salvar Cadastro</button>
+            </form>
+        </div>
+
+        <!-- Conteúdo do Cadastro de Publicação (Aba oculta) -->
+        <div class="tab-content" id="publicationTab">
+            <h2>Cadastro de Publicação</h2>
+            <form id="publicationForm">
+                <label for="title">Título da Publicação:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="author">Autor:</label>
+                <input type="text" id="author" name="author" required>
+
+                <label for="pubDate">Data de Publicação:</label>
+                <input type="date" id="pubDate" name="pubDate" required>
+
+                <label for="summary">Resumo:</label>
+                <textarea id="summary" name="summary" rows="4" required></textarea>
+
+                <label for="category">Categoria:</label>
+                <select id="category" name="category" required>
+                    <option value="">Selecione uma categoria</option>
+                    <option value="ciência">Ciência</option>
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="educação">Educação</option>
+                </select>
+
+                <label for="keywords">Palavras-chave:</label>
+                <input type="text" id="keywords" name="keywords" placeholder="Separar por vírgulas">
+
+                <button type="submit">Cadastrar Publicação</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Função para alternar entre as abas
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+
+            if (tabId === 'userTab') {
+                document.querySelector('.tab:nth-child(1)').classList.add('active');
+            } else {
+                document.querySelector('.tab:nth-child(2)').classList.add('active');
+            }
+        }
+
+        // Função para habilitar/desabilitar a aba de publicação
+        function toggleAdminSection() {
+            const roleSelect = document.getElementById("role");
+            const pubTab = document.getElementById("pubTab");
+
+            if (roleSelect.value === "admin") {
+                pubTab.style.pointerEvents = "auto";
+                pubTab.style.opacity = "1";
+            } else {
+                pubTab.style.pointerEvents = "none";
+                pubTab.style.opacity = "0.5";
+                switchTab('userTab');  // Volta para a aba de cadastro de usuário se o usuário mudar para estudante
+            }
+        }
+    </script>
+
+</body>
+</html>

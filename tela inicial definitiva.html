@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Publicações - Editora Unifeso</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background-color: #0d7c4d;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Retângulo branco ao redor do logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-background {
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-background img {
+            height: 40px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+            color: white;
+            position: relative;
+            top: 5px; /* Ajuste fino da posição para alinhar melhor com a logo */
+        }
+
+        /* Área de login e cadastro */
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-buttons a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        /* Contêiner principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Seção de busca e filtros */
+        .search-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-section input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search-section button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0d7c4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-section .filter-button {
+            padding: 10px;
+            font-size: 16px;
+            color: #0d7c4d;
+            border: 1px solid #0d7c4d;
+            background-color: transparent;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Filtro avançado */
+        .advanced-filters {
+            display: none;
+            margin-top: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+
+        /* Listagem de publicações */
+        .publication-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .publication {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        /* Rodapé */
+        .footer {
+            background-color: #0d7c4d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com Login e Cadastro -->
+    <div class="header">
+        <!-- Retângulo branco com a logo -->
+        <div class="logo-container">
+            <div class="logo-background">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/a/ad/Unifeso_logomarca.png" alt="Logo Unifeso">
+            </div>
+            <h1>Editora Unifeso</h1>
+        </div>
+        <div class="auth-buttons">
+            <a href="/login">Login</a>
+            <a href="/register">Cadastrar</a>
+        </div>
+    </div>
+
+    <!-- Contêiner principal -->
+    <div class="container">
+        <!-- Seção de busca e filtros -->
+        <div class="search-section">
+            <input type="text" placeholder="Buscar publicações...">
+            <button>Pesquisar</button>
+            <button class="filter-button" onclick="toggleFilters()">Filtros Avançados</button>
+        </div>
+
+        <!-- Filtros avançados -->
+        <div class="advanced-filters" id="advanced-filters">
+            <h3>Filtrar Publicações</h3>
+            <form>
+                <label for="author">Autor:</label>
+                <input type="text" id="author" name="author"><br><br>
+
+                <label for="category">Categoria:</label>
+                <select id="category" name="category">
+                    <option value="">Selecione uma categoria</option>
+                    <option value="ciência">Ciência</option>
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="educação">Educação</option>
+                </select><br><br>
+
+                <label for="date">Data de Publicação:</label>
+                <input type="date" id="date" name="date"><br><br>
+
+                <label for="keywords">Palavras-chave:</label>
+                <input type="text" id="keywords" name="keywords"><br><br>
+
+                <button type="submit">Aplicar Filtros</button>
+            </form>
+        </div>
+
+        <!-- Listagem de publicações -->
+        <div class="publication-list">
+            <!-- Publicação Exemplo -->
+            <div class="publication">
+                <h3>Título da Publicação</h3>
+                <p><strong>Autor:</strong> Nome do Autor</p>
+                <p><strong>Data de Publicação:</strong> DD/MM/AAAA</p>
+                <p><strong>Resumo:</strong> Um breve resumo da publicação vai aqui...</p>
+                <a href="/detalhes-publicacao" style="color: #0d7c4d; text-decoration: underline;">Ver mais detalhes</a>
+            </div>
+
+            <!-- Outras publicações podem ser listadas aqui -->
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>&copy; 2023 Editora Unifeso - Todos os direitos reservados.</p>
+    </div>
+
+    <script>
+        // Função para alternar a exibição dos filtros avançados
+        function toggleFilters() {
+            const filters = document.getElementById("advanced-filters");
+            filters.style.display = filters.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

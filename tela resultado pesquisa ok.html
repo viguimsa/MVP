@@ -13,82 +13,138 @@
             padding: 0;
         }
 
-        /* Cabeçalho */
+        .container-logo {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(73, 72, 72, 0.2);
+        }
+
+        .container-logo img {
+            height: 50px;
+        }
+
         .cabecalho {
             background-color: #0d7c4d;
             color: white;
-            padding: 5px 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 20px;
+            text-align: center;
+            position: relative;
         }
 
-        .container-logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .fundo-logo {
-            background-color: white;
-            padding: 5px;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-        .fundo-logo img {
-            height: 40px;
-        }
-
-        .cabecalho h1 {
-            font-size: 24px;
-            color: white;
-            text-align: left;
-        }
-
-        .botoes-autenticacao a {
-            color: white;
-            text-decoration: none;
-            padding: 5px;
-            border: 1px solid white;
-            border-radius: 5px;
-            margin-left: 5px;
+        h1 {
+            font-size: 28px;
+            margin: 0;
         }
 
         .conteiner {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            text-align: left;
-        }
-
-        .resultado-pesquisa {
-            margin-top: 20px;
-        }
-
-        .resultado-pesquisa .publicacao {
-            border: 1px solid #ddd;
             padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            background-color: white;
         }
 
-        .publicacao  {
-            font-size: 20px;
-            color: #000000;
+        .publicacao {
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .publicacao h3 {
+            font-size: 22px;
+            color: #0d7c4d;
+            margin: 0 0 10px 0;
         }
 
         .publicacao p {
+            font-size: 16px;
             margin: 5px 0;
+            line-height: 1.5;
         }
 
-        .rodape {
-            background-color: #0d7c4d;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
+        .publicacao a {
+            font-size: 16px;
+            color: #067949;
+            text-decoration: underline;
         }
+
+        .avaliacao {
+            margin-top: 15px;
+        }
+
+        .stars {
+            display: flex;
+            gap: 8px;
+        }
+
+        .star {
+            font-size: 28px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .star:hover,
+        .star.active {
+            color: #f0a500;
+        }
+
+        .comentarios {
+            margin-top: 15px;
+        }
+
+        .comentarios textarea {
+            width: 100%;
+            height: 60px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 8px;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .comentarios button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #067949;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .comentarios button:hover {
+            background-color: #055a36;
+        }
+
+        /* Estilo para alinhar o botão de download */
+        .linha-publicacao {
+            display: flex;
+            justify-content: flex-end; /* Alinha o botão na direita */
+            margin-top: 15px; /* Espaçamento de cima */
+        }
+
+        .botao-download {
+            padding: 5px 15px;
+            background-color: #a1e2c7;
+            color: rgb(238, 232, 232);
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 16px;
+            margin-top: 0px;
+            
+        }
+
+        .botao-download:hover {
+            background-color: #055a36; /* Cor do botão quando passar o mouse */
+        }
+
+        
     </style>
 </head>
 <body>
@@ -96,26 +152,109 @@
     <!-- Cabeçalho -->
     <div class="cabecalho">
         <div class="container-logo">
-            <div class="fundo-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/pt/a/ad/Unifeso_logomarca.png" alt="Logo Unifeso">
-            </div>
-            <h1>Editora Unifeso</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/pt/a/ad/Unifeso_logomarca.png" alt="Logo Unifeso">
         </div>
+        <h1>Editora Unifeso</h1>
     </div>
 
     <!-- Conteúdo principal -->
     <div class="conteiner">
-        <h2>Resultados da Pesquisa</h2>
-        <div class="resultado-pesquisa">
-            <div class="publicacao">
-                <h3>Título da Publicação 1</h3>
-                <p><strong>Autor:</strong> Autor 1</p>
-                <p><strong>Data de Publicação:</strong> 01/01/2024</p>
-                <p><strong>Resumo:</strong> Resumo breve da publicação 1.</p>
-                <a href="/detalhes-publicacao" style="color: #067949; text-decoration: underline;">Clique aqui para detalhes</a>
+        <!-- Publicação 1 -->
+        <div class="publicacao" id="publicacao-1">
+            <h3>Título da Publicação 1</h3>
+            <p><strong>Autor:</strong> Autor 1</p>
+            <p><strong>Resumo:</strong> Resumo breve da publicação 1.</p>
+            <p><strong>Categoria:</strong> Categoria da publicação 1</p>
+            <a href="/detalhes-publicacao">Clique aqui para detalhes</a>
+
+            <!-- Botão de download -->
+            <div class="linha-publicacao">
+                <a href="download-link" class="botao-download">Download</a>
             </div>
-            <div class="publicacao">
-                <h3>Título da Publicação 2</h3>
-                <p><strong>Autor:</strong> Autor 2</p>
-                <p><strong>Data da Publicação:</strong> 01/01/2024</p>
-                <p><strong>Resumo:</strong> Resumo da publicação 2.</p>
+
+            <!-- Avaliação com estrelas -->
+            <div class="avaliacao">
+                <p><strong>Avalie:</strong></p>
+                <div class="stars">
+                    <span class="star" onclick="avaliar(1, 1)">★</span>
+                    <span class="star" onclick="avaliar(1, 2)">★</span>
+                    <span class="star" onclick="avaliar(1, 3)">★</span>
+                    <span class="star" onclick="avaliar(1, 4)">★</span>
+                    <span class="star" onclick="avaliar(1, 5)">★</span>
+                </div>
+            </div>
+
+            <!-- Comentários -->
+            <div class="comentarios">
+                <p><strong>Comentários:</strong></p>
+                <ul id="lista-comentarios-1"></ul>
+                <textarea id="comentario-1" placeholder="Adicione seu comentário"></textarea>
+                <button onclick="adicionarComentario(1)">Enviar</button>
+            </div>
+        </div>
+
+        <!-- Publicação 2 -->
+        <div class="publicacao" id="publicacao-2">
+            <h3>Título da Publicação 2</h3>
+            <p><strong>Autor:</strong> Autor 2</p>
+            <p><strong>Resumo:</strong> Resumo  da publicação 2.</p>
+            <p><strong>Categoria:</strong> Categoria da publicação 2</p>
+            <a href="/detalhes-publicacao">Clique aqui para detalhes</a>
+
+            <!-- Botão de download -->
+            <div class="linha-publicacao">
+                <a href="download-link" class="botao-download">Download</a>
+            </div>
+
+            <!-- Avaliação com estrelas -->
+            <div class="avaliacao">
+                <p><strong>Avalie:</strong></p>
+                <div class="stars">
+                    <span class="star" onclick="avaliar(2, 1)">★</span>
+                    <span class="star" onclick="avaliar(2, 2)">★</span>
+                    <span class="star" onclick="avaliar(2, 3)">★</span>
+                    <span class="star" onclick="avaliar(2, 4)">★</span>
+                    <span class="star" onclick="avaliar(2, 5)">★</span>
+                </div>
+            </div>
+
+            <!-- Comentários -->
+            <div class="comentarios">
+                <p><strong>Comentários:</strong></p>
+                <ul id="lista-comentarios-2"></ul>
+                <textarea id="comentario-2" placeholder="Adicione seu comentário"></textarea>
+                <button onclick="adicionarComentario(2)">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function avaliar(publicacaoId, nota) {
+            const estrelas = document.querySelectorAll(`#publicacao-${publicacaoId} .star`);
+            estrelas.forEach((estrela, index) => {
+                if (index < nota) {
+                    estrela.classList.add('active');
+                } else {
+                    estrela.classList.remove('active');
+                }
+            });
+            console.log(`Publicação ${publicacaoId} avaliada com ${nota} estrela(s).`);
+        }
+
+        function adicionarComentario(publicacaoId) {
+            const inputComentario = document.getElementById(`comentario-${publicacaoId}`);
+            const listaComentarios = document.getElementById(`lista-comentarios-${publicacaoId}`);
+
+            if (inputComentario.value.trim() !== "") {
+                const novoComentario = document.createElement("li");
+                novoComentario.textContent = inputComentario.value;
+                listaComentarios.appendChild(novoComentario);
+                inputComentario.value = "";
+            } else {
+                alert("Por favor, insira um comentário.");
+            }
+        }
+    </script>
+
+</body>
+</html>

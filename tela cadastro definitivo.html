@@ -3,193 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Usuário e Publicação - Editora Unifeso</title>
+    <title>Plataforma de Publicações - Editora Unifeso</title>
     <style>
+        /* Estilos básicos */
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+
+            
         }
 
-        .container {
-            width: 500px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .tabs {
-            display: flex;
-            border-bottom: 2px solid #ddd;
-            cursor: pointer;
-        }
-
-        .tab {
-            flex: 1;
-            padding: 15px;
-            text-align: center;
-            color: #0d7c4d;
-            font-weight: bold;
-            border-right: 1px solid #ddd;
-        }
-
-        .tab:last-child {
-            border-right: none;
-        }
-
-        .tab.active {
+        /* Cabeçalho */
+        .cabecalho {
             background-color: #0d7c4d;
             color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .tab-content {
-            display: none;
-            padding: 20px;
+        /* Contêiner da logo */
+        .container-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .tab-content.active {
-            display: block;
+        .fundo-logo {
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
-            color: #0d7c4d;
-            text-align: center;
+        .fundo-logo img {
+            height: 40px;
         }
 
-        label {
-            display: block;
-            text-align: left;
-            margin: 10px 0 5px;
+        .cabecalho h1 {
+            font-size: 24px;
+            margin: 0;
+            color: white;
+            position: relative;
+            top: 5px; /* Ajuste  da posição para alinhar melhor com a logo */
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        input[type="date"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
+        /* Área de login e cadastro */
+        .botoes-autenticacao {
+            display: flex;
+            gap: 10px;
+        }
+
+        .botoes-autenticacao a {
+            color: white;
+            text-decoration: seagreen;
+            padding: 5px 10px;
+            border: 1px solid white;
             border-radius: 5px;
         }
 
-        button {
-            width: 100%;
+        /* Contêiner principal */
+        .container-principal {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Seção de busca e filtros */
+        .secao-busca {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+           
+        }
+
+        .secao-busca input[type="text"] {
+            width: 60%;
             padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            
+        }
+
+        .secao-busca button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
             background-color: #0d7c4d;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
         }
 
-        button:hover {
-            background-color: #09663d;
+        .secao-busca .botao-filtro {
+            padding: 10px;
+            font-size: 16px;
+            color: #0d7c4d;
+            border: 1px solid #0d7c4d;
+            background-color: transparent;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Filtro avançado */
+        .filtros-avancados {
+            display: none;
+            margin-top: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+
+        /* Listagem de publicações */
+        .lista-publicacoes {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .publicacao {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        /* Rodapé */
+        .rodape {
+            background-color: #0d7c4d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+         
+        .botao-filtro{
+        text-decoration:none; 
+        .botoes-autenticacao {
+           width: auto; 
+        box-decoration-break: slice;
+        border-bottom: #0d7c4d;
+        }
+
+
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Tabs para alternar entre o cadastro de usuário e de publicação -->
-        <div class="tabs">
-            <div class="tab active" onclick="switchTab('userTab')">Cadastro de Usuário</div>
-            <div class="tab" id="pubTab" onclick="switchTab('publicationTab')" style="pointer-events: none; opacity: 0.5;">Cadastro de Publicação</div>
+    <!-- Cabeçalho com Login e Cadastro -->
+    <div class="cabecalho">
+        <!-- Contêiner da logo -->
+        <div class="container-logo">
+            <div class="fundo-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/a/ad/Unifeso_logomarca.png" alt="Logo Unifeso">
+            </div>
+            <h1>Editora Unifeso</h1>
         </div>
-
-        <!-- Conteúdo do Cadastro de Usuário -->
-        <div class="tab-content active" id="userTab">
-            <h2>Cadastro de Usuário</h2>
-            <form id="registrationForm">
-                <label for="name">Nome Completo:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
-
-                <label for="role">Tipo de Usuário:</label>
-                <select id="role" name="role" onchange="toggleAdminSection()" required>
-                    <option value="">Selecione...</option>
-                    <option value="admin">Administrador</option>
-                    <option value="student">Estudante</option>
-                </select>
-
-                <button type="submit">Salvar Cadastro</button>
-            </form>
+        <div class="botoes-autenticacao">
+            <a href="/login">Login</a>
+             <a href="tela cadastro definitivo.html">Cadastrar</a>
         </div>
+    <!-- botão login -->
 
-        <!-- Conteúdo do Cadastro de Publicação (Aba oculta) -->
-        <div class="tab-content" id="publicationTab">
-            <h2>Cadastro de Publicação</h2>
-            <form id="publicationForm">
-                <label for="title">Título da Publicação:</label>
-                <input type="text" id="title" name="title" required>
+    
 
-                <label for="author">Autor:</label>
-                <input type="text" id="author" name="author" required>
+    </div>
 
-                <label for="pubDate">Data de Publicação:</label>
-                <input type="date" id="pubDate" name="pubDate" required>
+    <!-- Contêiner principal -->
+    <div class="container-principal">
+        <!-- Seção de busca e filtros -->
+        <div class="secao-busca">
+            <input type="text" placeholder="Buscar publicações...">
+            <a class="botao-filtro" onclick="toggleFilters()" href="tela resultado pesquisa ok.html">Pesquisar</a>
+            <button class="botao-filtro" onclick="toggleFilters()">Filtros Avançados</button>
+        </div>
+    
 
-                <label for="summary">Resumo:</label>
-                <textarea id="summary" name="summary" rows="4" required></textarea>
+        <!-- Filtros avançados -->
+        <div class="filtros-avancados" id="filtros-avancados">
+            <h3>Filtrar Publicações</h3>
+            <form>
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor"><br><br>
 
-                <label for="category">Categoria:</label>
-                <select id="category" name="category" required>
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" name="categoria">
                     <option value="">Selecione uma categoria</option>
                     <option value="ciência">Ciência</option>
                     <option value="tecnologia">Tecnologia</option>
                     <option value="educação">Educação</option>
-                </select>
+                    <option value="Inovação">Inovação</option>
+                    <option value="Robótica">Robótica</option>
+                </select><br><br>
 
-                <label for="keywords">Palavras-chave:</label>
-                <input type="text" id="keywords" name="keywords" placeholder="Separar por vírgulas">
+                <label for="data">Data da Publicação:</label>
+                <input type="date" id="data" name="data"><br><br>
 
-                <button type="submit">Cadastrar Publicação</button>
+                <label for="palavras-chave">Palavras-chave:</label>
+                <input type="text" id="palavras-chave" name="palavras-chave"><br><br>
+
+                <button type="submit">Aplicar Filtros</button>
             </form>
+        </div>
+
+        <!-- Listagem de publicações -->
+        <div class="lista-publicacoes">
+            <!-- Publicação Exemplo -->
+            <div class="publicacao">
+                <h3>Título da Publicação</h3>
+                <p><strong>Autor:</strong> Nome do Autor</p>
+                <p><strong>Data da Publicação:</strong> Data</p>
+                <p><strong>Resumo:</strong>Resumo da publicação</p>
+                <a href="/detalhes-publicacao" style="color: #0d7c4d; text-decoration: underline;">Mais detalhes</a>
+            </div>
+
+            <!-- Outras publicações podem ser listadas aqui -->
         </div>
     </div>
 
+    <!-- Rodapé -->
+    <div class="rodape">
+        <p>&copy; 2024 Editora Unifeso - Direitos reservados.</p>
+    </div>
+
     <script>
-        // Função para alternar entre as abas
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-
-            if (tabId === 'userTab') {
-                document.querySelector('.tab:nth-child(1)').classList.add('active');
-            } else {
-                document.querySelector('.tab:nth-child(2)').classList.add('active');
-            }
-        }
-
-        // Função para habilitar/desabilitar a aba de publicação
-        function toggleAdminSection() {
-            const roleSelect = document.getElementById("role");
-            const pubTab = document.getElementById("pubTab");
-
-            if (roleSelect.value === "admin") {
-                pubTab.style.pointerEvents = "auto";
-                pubTab.style.opacity = "1";
-            } else {
-                pubTab.style.pointerEvents = "none";
-                pubTab.style.opacity = "0.5";
-                switchTab('userTab');  // Volta para a aba de cadastro de usuário se o usuário mudar para estudante
-            }
+        // Função para alternar a exibição dos filtros avançados
+        function toggleFilters() {
+            const filtros = document.getElementById("filtros-avancados");
+            filtros.style.display = filtros.style.display === "none" ? "block" : "none";
         }
     </script>
 
+
+
+
 </body>
 </html>
+

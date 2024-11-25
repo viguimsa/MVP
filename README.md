@@ -5,7 +5,7 @@
 
 # :hammer: Funcionalidades do projeto
 
-- 
+
 
 # 🛠️ Abrir e rodar o projeto
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-size: 14px; /* Fonte padrão reduzida */
+            font-size: 13px; /* Redução do tamanho padrão da fonte */
         }
 
         .container {
@@ -32,11 +32,12 @@
 
         .tab {
             flex: 1;
-            padding: 15px;
+            padding: 10px; /* Redução no padding */
             text-align: center;
             color: #0d7c4d;
             font-weight: bold;
             border-right: 1px solid #ddd;
+            font-size: 13px; /* Fonte reduzida */
         }
 
         .tab:last-child {
@@ -50,7 +51,7 @@
 
         .tab-content {
             display: none;
-            padding: 20px;
+            padding: 15px; /* Redução no padding */
         }
 
         .tab-content.active {
@@ -60,67 +61,48 @@
         h2 {
             color: #0d7c4d;
             text-align: center;
+            font-size: 16px; /* Fonte menor para títulos */
         }
 
         label {
             display: block;
             text-align: left;
-            margin: 10px 0 5px;
-            font-size: 14px; /* Fonte reduzida */
+            margin: 8px 0 4px; /* Menos espaço */
+            font-size: 12px; /* Fonte reduzida */
         }
 
         input[type="text"],
         input[type="email"],
         input[type="password"],
         input[type="date"],
-        input[type="matricula"],
         textarea,
         select {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
+            padding: 8px; /* Redução no padding */
+            margin-bottom: 10px; /* Menos espaço entre campos */
             border: 1px solid #ddd;
             border-radius: 5px;
-            font-size: 14px; /* Fonte reduzida */
+            font-size: 12px; /* Fonte reduzida */
         }
 
         button {
             width: 100%;
-            padding: 10px;
+            padding: 8px; /* Redução no padding */
             background-color: #0d7c4d;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 14px; /* Fonte reduzida */
+            font-size: 13px; /* Fonte menor */
         }
 
         button:hover {
             background-color: #09663d;
         }
-
-        .font-buttons {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .font-buttons button {
-            width: auto;
-            margin: 0 5px;
-            padding: 5px 10px;
-            font-size: 12px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Botões para ajuste dinâmico de fonte -->
-        <div class="font-buttons">
-            <button onclick="adjustFontSize(12)">Diminuir Fonte</button>
-            <button onclick="adjustFontSize(14)">Fonte Padrão</button>
-            <button onclick="adjustFontSize(16)">Aumentar Fonte</button>
-        </div>
-
         <!-- Tabs para alternar entre o cadastro de usuário e de publicação -->
         <div class="tabs">
             <div class="tab active" onclick="switchTab('userTab')">Cadastro de Usuário:</div>
@@ -141,7 +123,7 @@
                 <input type="password" id="password" name="password" required>
 
                 <label for="matricula">Matricula:</label>
-                <input type="matricula" id="matricula" name="matricula" required>
+                <input type="text" id="matricula" name="matricula" required>
 
                 <label for="role">Tipo de Usuário:</label>
                 <select id="role" name="role" onchange="toggleAdminSection()" required>
@@ -169,7 +151,7 @@
                 <input type="date" id="pubDate" name="pubDate" required>
 
                 <label for="summary">Resumo:</label>
-                <textarea id="summary" name="summary" rows="3" required></textarea>
+                <textarea id="summary" name="summary" rows="2" required></textarea>
 
                 <label for="category">Categoria:</label>
                 <select id="category" name="category" required>
@@ -177,11 +159,11 @@
                     <option value="ciência">Ciência</option>
                     <option value="tecnologia">Tecnologia</option>
                     <option value="educação">Educação</option>
-                    <option value="Inovação">Inovação</option>
-                    <option value="Robótica">Robótica</option>
+                    <option value="inovação">Inovação</option>
+                    <option value="robótica">Robótica</option>
                 </select>
 
-                <label for="keywords">Palavras-chave:</label>
+                <label for="keywords">importar arquivo:</label>
                 <input type="text" id="keywords" name="keywords" placeholder="Separar por vírgulas">
 
                 <button type="submit">Cadastrar Publicação</button>
@@ -216,11 +198,6 @@
                 pubTab.style.opacity = "0.5";
                 switchTab('userTab'); // Volta para a aba de cadastro de usuário se o usuário mudar para estudante
             }
-        }
-
-        // Função para ajuste dinâmico do tamanho da fonte
-        function adjustFontSize(size) {
-            document.body.style.fontSize = size + 'px';
         }
     </script>
 </body>

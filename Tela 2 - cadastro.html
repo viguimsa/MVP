@@ -14,6 +14,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            font-size: 14px; /* Fonte padrão reduzida */
         }
 
         .container {
@@ -65,6 +66,7 @@
             display: block;
             text-align: left;
             margin: 10px 0 5px;
+            font-size: 14px; /* Fonte reduzida */
         }
 
         input[type="text"],
@@ -79,6 +81,7 @@
             margin-bottom: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            font-size: 14px; /* Fonte reduzida */
         }
 
         button {
@@ -89,17 +92,35 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 14px; /* Fonte reduzida */
         }
 
         button:hover {
             background-color: #09663d;
         }
+
+        .font-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .font-buttons button {
+            width: auto;
+            margin: 0 5px;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
-
     <div class="container">
+        <!-- Botões para ajuste dinâmico de fonte -->
+        <div class="font-buttons">
+            <button onclick="adjustFontSize(12)">Diminuir Fonte</button>
+            <button onclick="adjustFontSize(14)">Fonte Padrão</button>
+            <button onclick="adjustFontSize(16)">Aumentar Fonte</button>
+        </div>
+
         <!-- Tabs para alternar entre o cadastro de usuário e de publicação -->
         <div class="tabs">
             <div class="tab active" onclick="switchTab('userTab')">Cadastro de Usuário:</div>
@@ -120,8 +141,7 @@
                 <input type="password" id="password" name="password" required>
 
                 <label for="matricula">Matricula:</label>
-                <input type="Matricula" id="Matricula" name="Matricula" required>
-                <option value="">Preencha...</option>
+                <input type="matricula" id="matricula" name="matricula" required>
 
                 <label for="role">Tipo de Usuário:</label>
                 <select id="role" name="role" onchange="toggleAdminSection()" required>
@@ -149,7 +169,7 @@
                 <input type="date" id="pubDate" name="pubDate" required>
 
                 <label for="summary">Resumo:</label>
-                <textarea id="summary" name="summary" rows="1" required></textarea>
+                <textarea id="summary" name="summary" rows="3" required></textarea>
 
                 <label for="category">Categoria:</label>
                 <select id="category" name="category" required>
@@ -194,10 +214,14 @@
             } else {
                 pubTab.style.pointerEvents = "none";
                 pubTab.style.opacity = "0.5";
-                switchTab('userTab');  // Volta para a aba de cadastro de usuário se o usuário mudar para estudante
+                switchTab('userTab'); // Volta para a aba de cadastro de usuário se o usuário mudar para estudante
             }
         }
-    </script>
 
+        // Função para ajuste dinâmico do tamanho da fonte
+        function adjustFontSize(size) {
+            document.body.style.fontSize = size + 'px';
+        }
+    </script>
 </body>
 </html>

@@ -31,6 +31,9 @@
 
 • Informação de qual MVP definido: Protótipo
 
-• Instruções para executar/abrir o MVP: 
+• Objetivo do produto 
 
+ • Disponibilizar livros para leitura com opção de download.
+
+ 
 

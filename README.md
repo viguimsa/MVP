@@ -42,7 +42,7 @@
 
 •  Identificação do público alvo 
 
- 📝 • Quem representa o mercado
+ 📝 • **Quem representa o mercado**
 
 • Os acadêmicos que buscam conhecimento.
 

@@ -57,3 +57,10 @@ Dores do público alvo
 
 • 🧰 **Dores do público-alvo**
 
+• Dificuldade no processo de cadastro de novas publicações.
+
+• Exigência de diferentes níveis de acesso para gerenciar e editar conteúdo.
+
+
+
+

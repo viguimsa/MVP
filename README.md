@@ -31,6 +31,6 @@
 
 • Informação de qual MVP definido: Protótipo
 
-• Instruções para executar/abrir o MVP: Executar pelo link
+• Instruções para executar/abrir o MVP: 
 
 

@@ -35,5 +35,16 @@
 
  • Disponibilizar livros para leitura com opção de download.
 
+• Benefícios do produto
  
+• Produto autêntico e exclusivo para acadêmicos da instituição de forma gratuita.
+
+•  Identificação do público alvo 
+
+• Quem representa o mercado
+
+• Os acadêmicos que buscam conhecimento.
+
+
+
 

@@ -29,3 +29,5 @@
 •GitHub, para hospedagem do repositório:
 
 
+• Informação de qual MVP definido: Protótipo
+

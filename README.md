@@ -20,8 +20,12 @@
 
 
 
+
+
 • Tecnologias utilizadas:
 
+•Html, css e javascript para a criação do projeto.
 
+•GitHub, para hospedagem do repositório:
 
 

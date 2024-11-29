@@ -36,7 +36,7 @@
 
  • Disponibilizar livros para leitura com opção de download.
 
-🚀 • Benefícios do produto
+🚀 • **Benefícios do produto**
  
 • Produto autêntico e exclusivo para acadêmicos da instituição de forma gratuita.
 

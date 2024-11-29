@@ -4,7 +4,7 @@
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
- 💡 •Equipe de Desenvolvimento
+ 💡 •**Equipe de Desenvolvimento**
 
 • Gustavo  da Silva Salomao
 
@@ -16,14 +16,14 @@
 
 
 
-📌 • Nome da situação problema escolhido:
+📌 **•Nome da situação problema escolhido:**
 
 •Editora Unifeso 
 
 
 
 
-📌 • Tecnologias utilizadas:
+📌 • **Tecnologias utilizadas:**
 
 •Html, css e javascript para a criação do projeto.
 

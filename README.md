@@ -1,6 +1,6 @@
 # Editora Unifeso
 ## Produto autêntico e exclusivo para acadêmicos da instituição de forma gratuita.
-Navegar de forma mais ágil para o entendimento da matéria.
+
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 

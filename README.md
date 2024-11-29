@@ -32,7 +32,7 @@
 
 • Informação de qual MVP definido: Protótipo
 
-🧰  • Objetivo do produto 
+🧰  • **Objetivo do produto****
 
  • Disponibilizar livros para leitura com opção de download.
 

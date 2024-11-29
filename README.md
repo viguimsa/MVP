@@ -4,7 +4,7 @@
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
-•Equipe de Desenvolvimento
+ 💡 •Equipe de Desenvolvimento
 
 • Gustavo  da Silva Salomao
 
@@ -23,7 +23,7 @@
 
 
 
-• Tecnologias utilizadas:
+📌 • Tecnologias utilizadas:
 
 •Html, css e javascript para a criação do projeto.
 
@@ -32,17 +32,17 @@
 
 • Informação de qual MVP definido: Protótipo
 
-🔨 • Objetivo do produto 
+🧰  • Objetivo do produto 
 
  • Disponibilizar livros para leitura com opção de download.
 
-• Benefícios do produto
+🚀 • Benefícios do produto
  
 • Produto autêntico e exclusivo para acadêmicos da instituição de forma gratuita.
 
 •  Identificação do público alvo 
 
-• Quem representa o mercado
+ 📝 • Quem representa o mercado
 
 • Os acadêmicos que buscam conhecimento.
 

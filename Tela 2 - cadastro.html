@@ -11,17 +11,54 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
+            height: 100%;
             font-size: 13px;
+        }
+
+        .header {
+    width: 100%;
+    background-color: #0d7c4d;
+    padding: 10px 20px 10px 20px;  /* Ajuste do padding superior */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-left: 20px; /* Move a logo um pouco mais à direita */
+        }
+
+        .logo-container .fundo-logo {
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            height: 40px; /* Logo ajustada */
+        }
+
+        .titulo {
+            color: white;
+            font-size: 24px; /* Tamanho do título */
+            font-weight: bold;
+            margin-left: 10px;
+            margin-top: 8px; /* Alinha o título mais para baixo */
         }
 
         .container {
             width: 500px;
             background-color: white;
-            border-radius: 8px;
+            border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 22px;
+            padding-bottom: 60px; /* espaço para o rodapé */
         }
 
         .abas {
@@ -87,12 +124,12 @@
 
         .upload-arquivo {
             display: flex;
-            justify-content: space-between; /* Alinha o botão à direita */
+            justify-content: space-between;
             align-items: center;
         }
 
         input[type="file"] {
-            display: none; /* Oculta o input padrão */
+            display: none;
         }
 
         .botao-upload {
@@ -100,7 +137,7 @@
             color: white;
             border: none;
             border-radius: 5px;
-            padding: 5px 10px; /* Botão menor */
+            padding: 5px 10px;
             cursor: pointer;
             font-size: 12px;
         }
@@ -146,9 +183,30 @@
         .remover-arquivo:hover {
             text-decoration: underline;
         }
+
+        .rodape {
+    background-color: #0d7c4d;
+    color: white;
+    text-align: center;
+    padding: 10px; /* Reduzido o padding para mover o texto mais para cima */
+    position: fixed;
+    bottom: 0; /* Ajuste para ficar mais perto da base da tela */
+    width: 100%;
+    font-size: 16px; /* Mantido o aumento da fonte */
+}
+
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="logo-container">
+            <div class="fundo-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/a/ad/Unifeso_logomarca.png" alt="Logo Editora Unifeso" class="logo">
+            </div>
+            <span class="titulo">Editora Unifeso</span>
+        </div>
+    </div>
+
     <div class="container">
         <div class="abas">
             <div class="aba ativa" onclick="trocarAba('userTab')">Cadastro de Usuário</div>
@@ -220,6 +278,11 @@
                 <button type="submit">Cadastrar Publicação</button>
             </form>
         </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="rodape">
+        <p>&copy; 2024 Editora Unifeso - Direitos reservados.</p>
     </div>
 
     <script>

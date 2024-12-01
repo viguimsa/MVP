@@ -36,14 +36,18 @@
         }
 
         .container-logo img {
-            height: 38px; /*  a altura da logo  */
+            height: 40px; /*  a altura da logo  */
+            width: 100px;
+            width: 100px;
+            
             transform: translateY(-1px); /* Estica a logo para cima em 1px */
         }
 
         h1 {
-            font-size: 25px; /*  a fonte do título  */
+            font-size: 24px; /*  a fonte do título  */
             margin: 0;
             margin-left: 10px; /* Espaço entre a logo e o texto */
+            margin-bottom: -6px;
         }
 
         .conteiner {
@@ -154,8 +158,10 @@
             background-color: #0d7c4d;
             color: white;
             text-align: center;
-            padding: 15px 0; /*  padding para  o espaçamento */
-            font-size: 16px;
+            padding: 16px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         /* Container do rodapé para manter alinhado com o conteúdo */

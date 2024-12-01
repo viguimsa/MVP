@@ -11,39 +11,44 @@
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
-        }
-
-        .container-logo {
-            position: absolute;
-            left: 10px;
-            top: 10px;
             display: flex;
-            align-items: center;
-            background-color: white;
-            padding: 5px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(73, 72, 72, 0.2);
-        }
-
-        .container-logo img {
-            height: 50px;
+            flex-direction: column;
+            min-height: 100vh; /* Faz o corpo ocupar toda a altura da tela */
         }
 
         .cabecalho {
             background-color: #0d7c4d;
             color: white;
-            padding: 20px;
-            text-align: center;
+            padding: 13px 20px; /* Diminuí o padding do cabeçalho em 1px */
+            text-align: left;
             position: relative;
+            display: flex; /* Flexbox para alinhar logo e título na mesma linha */
+            align-items: center; /* Alinha verticalmente */
+        }
+
+        .container-logo {
+            display: flex;
+            align-items: center;
+            background-color: white; /* Fundo branco */
+            padding: 5px 10px; /*  um pouco de espaço ao redor da logo */
+            border-radius: 5px; /* Borda arredondada */
+            box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        .container-logo img {
+            height: 38px; /*  a altura da logo  */
+            transform: translateY(-1px); /* Estica a logo para cima em 1px */
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 25px; /*  a fonte do título  */
             margin: 0;
+            margin-left: 10px; /* Espaço entre a logo e o texto */
         }
 
         .conteiner {
-            padding: 15px;
+            padding: 14px;
+            flex-grow: 1; /* Faz com que o conteúdo ocupe o espaço disponível */
         }
 
         .publicacao {
@@ -72,8 +77,30 @@
             text-decoration: underline;
         }
 
-        .avaliacao {
+        .linha-publicacao {
+            display: flex;
+            justify-content: space-between; /* Espaça os itens na linha */
+            align-items: center; /* Alinha verticalmente */
             margin-top: 15px;
+        }
+
+        .botao-download {
+            padding: 7px 20px;
+            background-color: #79c9a5;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .botao-download:hover {
+            background-color: #17684d; /* Cor do botão ao passar o mouse */
+        }
+
+        .avaliacao {
+            display: flex;
+            align-items: center;
         }
 
         .stars {
@@ -122,29 +149,20 @@
             background-color: #055a36;
         }
 
-        /* Estilo para alinhar o botão de download */
-        .linha-publicacao {
-            display: flex;
-            justify-content: flex-end; /* Alinha o botão na direita */
-            margin-top: 15px; /* Espaçamento de cima */
-        }
-
-        .botao-download {
-            padding: 5px 15px;
-            background-color: #a1e2c7;
-            color: rgb(238, 232, 232);
-            text-decoration: none;
-            border-radius: 7px;
+        /* Rodapé */
+        .rodape {
+            background-color: #0d7c4d;
+            color: white;
+            text-align: center;
+            padding: 15px 0; /*  padding para  o espaçamento */
             font-size: 16px;
-            margin-top: 0px;
-            
         }
 
-        .botao-download:hover {
-            background-color: #055a36; /* Cor do botão quando passar o mouse */
+        /* Container do rodapé para manter alinhado com o conteúdo */
+        .rodape-conteudo {
+            max-width: 1200px; /* Centraliza conforme o conteúdo principal */
+            margin: 0 auto;
         }
-
-        
     </style>
 </head>
 <body>
@@ -167,21 +185,20 @@
             <p><strong>Categoria:</strong> Categoria da publicação 1</p>
             <a href="/detalhes-publicacao">Clique aqui para detalhes</a>
 
-            <!-- Botão de download -->
+            <!-- Linha com download e avaliação -->
             <div class="linha-publicacao">
-                <a href="download-link" class="botao-download">Download</a>
-            </div>
-
-            <!-- Avaliação com estrelas -->
-            <div class="avaliacao">
-                <p><strong>Avalie:</strong></p>
-                <div class="stars">
-                    <span class="star" onclick="avaliar(1, 1)">★</span>
-                    <span class="star" onclick="avaliar(1, 2)">★</span>
-                    <span class="star" onclick="avaliar(1, 3)">★</span>
-                    <span class="star" onclick="avaliar(1, 4)">★</span>
-                    <span class="star" onclick="avaliar(1, 5)">★</span>
+                <div class="avaliacao">
+                    <p><strong>Avalie:</strong></p>
+                    <div class="stars">
+                        <span class="star" onclick="avaliar(1, 1)">★</span>
+                        <span class="star" onclick="avaliar(1, 2)">★</span>
+                        <span class="star" onclick="avaliar(1, 3)">★</span>
+                        <span class="star" onclick="avaliar(1, 4)">★</span>
+                        <span class="star" onclick="avaliar(1, 5)">★</span>
+                    </div>
                 </div>
+
+                <a href="download-link" class="botao-download">Download</a>
             </div>
 
             <!-- Comentários -->
@@ -192,39 +209,12 @@
                 <button onclick="adicionarComentario(1)">Enviar</button>
             </div>
         </div>
+    </div>
 
-        <!-- Publicação 2 -->
-        <div class="publicacao" id="publicacao-2">
-            <h3>Título da Publicação 2</h3>
-            <p><strong>Autor:</strong> Autor 2</p>
-            <p><strong>Resumo:</strong> Resumo  da publicação 2.</p>
-            <p><strong>Categoria:</strong> Categoria da publicação 2</p>
-            <a href="/detalhes-publicacao">Clique aqui para detalhes</a>
-
-            <!-- Botão de download -->
-            <div class="linha-publicacao">
-                <a href="download-link" class="botao-download">Download</a>
-            </div>
-
-            <!-- Avaliação com estrelas -->
-            <div class="avaliacao">
-                <p><strong>Avalie:</strong></p>
-                <div class="stars">
-                    <span class="star" onclick="avaliar(2, 1)">★</span>
-                    <span class="star" onclick="avaliar(2, 2)">★</span>
-                    <span class="star" onclick="avaliar(2, 3)">★</span>
-                    <span class="star" onclick="avaliar(2, 4)">★</span>
-                    <span class="star" onclick="avaliar(2, 5)">★</span>
-                </div>
-            </div>
-
-            <!-- Comentários -->
-            <div class="comentarios">
-                <p><strong>Comentários:</strong></p>
-                <ul id="lista-comentarios-2"></ul>
-                <textarea id="comentario-2" placeholder="Adicione seu comentário"></textarea>
-                <button onclick="adicionarComentario(2)">Enviar</button>
-            </div>
+    <!-- Rodapé -->
+    <div class="rodape">
+        <div class="rodape-conteudo">
+            <p>&copy; 2024 Editora Unifeso - Direitos reservados.</p>
         </div>
     </div>
 

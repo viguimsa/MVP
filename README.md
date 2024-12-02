@@ -32,7 +32,7 @@
 
 • Informação de qual MVP definido: Protótipo
 
-🚧  • **Objetivo do produto****
+🚧  • **Objetivo do produto***
 
  • Disponibilizar livros para leitura com opção de download.
 
@@ -40,7 +40,10 @@
  
 • Produto autêntico e exclusivo para acadêmicos da instituição de forma gratuita
 
-•  Identificação do público alvo 
+• Navegar de forma mais ágil para o entendimento da matéria
+
+
+**•  Identificação do público alvo**
 
  📝 • **Quem representa o mercado**
 

@@ -6,7 +6,7 @@
 
  💡 •**Equipe de Desenvolvimento** 💻
 
-• Gustavo  da Silva Salomao
+• Gustavo  da Silva Salomão
 
 • Vitoria Guimarães da Silva 
 

@@ -30,7 +30,7 @@
 •GitHub, para hospedagem do repositório
 
 
-• Informação de qual MVP definido: Protótipo
+💻 **• Informação de qual MVP definido:** Protótipo
 
 📝 • Método agil usado: XP
 

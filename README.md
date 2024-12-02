@@ -32,7 +32,7 @@
 
 💻 **• Informação de qual MVP definido:** Protótipo
 
-📝 • Método agil usado: XP
+📝 **• Método agil usado:** XP
 
 🚧  • **Objetivo do produto***
 

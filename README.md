@@ -32,6 +32,8 @@
 
 • Informação de qual MVP definido: Protótipo
 
+📝 • Método Agil usado: XP
+
 🚧  • **Objetivo do produto***
 
  • Disponibilizar livros para leitura com opção de download.

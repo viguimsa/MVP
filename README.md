@@ -66,8 +66,6 @@
 • Encontrar material complementar de qualidade e sem custo
 
 
-
-
  💡 **•Garantia de Solução**
 
  • Simplicidade eliminando a dificuldade no processo de cadastro de publicações
@@ -89,10 +87,14 @@
 
 💼 **• Próximos Passos**
 
-•
+• Expansão
+Ampliação do conteúdo e funcionalidades
 
-•
 
-•
+• Integração 
+incorporação a plataforma da universidade
 
-•
+
+• Monitoramento 
+Análise de métricas e feedback dos usuários
+

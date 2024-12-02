@@ -47,6 +47,9 @@
 
   📁 **• Identificação do público alvo**
 
+   • Estudantes 
+   
+
  📝 • **Quem representa o mercado**
 
 • Os acadêmicos que buscam aprimorar o conhecimento

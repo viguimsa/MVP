@@ -81,6 +81,8 @@
 
 • Satisfação 
 
+• Simplicidade
+
 
 💼 **• Próximos Passos**
 

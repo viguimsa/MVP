@@ -47,23 +47,19 @@
 
  📝 • **Quem representa o mercado**
 
-• Os acadêmicos que buscam conhecimento
+• Os acadêmicos que buscam aprimorar o conhecimento
 
 • Garantir estratégia alinhada com necessidades
-Dores do público alvo 
 
-• Informação de objetivos e benefícios do produto:
+• Fazer valer o direito que possuem por fazer parte da instituição de utilizar essa ferramenta para evoluir academicamente
 
-• Encontrar material complementar de qualidade e sem custo
-
-• Garantia de solução
 
 • 🧰 **Dores do público-alvo**
 
-• Dificuldade no processo de cadastro de novas publicações
+**• Necessidades**
+Material complementar para adquirir conhecimento e aprimorar o ensino
 
-• Exigência de diferentes níveis de acesso para gerenciar e editar conteúdo
-
-
+**• Desafios**
+Encontrar material complementar de qualidade e sem custo
 
 

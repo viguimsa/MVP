@@ -73,3 +73,13 @@
 
 🤖 **• Resultados Esperados**
 
+• Melhor aprendizado
+
+• Engajamento
+
+• Acessibilidade
+
+• Desempenho  acadêmico
+
+• Satisfação 
+

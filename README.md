@@ -64,4 +64,8 @@ Material complementar para adquirir conhecimento e aprimorar o ensino
 📌 **• Desafios**
 Encontrar material complementar de qualidade e sem custo
 
+ 💡 **•Garantia de Solução**
 
+ • Simplicidade eliminando a dificuldade no processo de cadastro de publicações
+
+ • Simplicidade no acesso seletivo aos conteúdos

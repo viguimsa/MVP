@@ -51,10 +51,6 @@
 
 • Os acadêmicos que buscam aprimorar o conhecimento
 
-• Garantir estratégia alinhada com necessidades
-
-• Fazer valer o direito que possuem por fazer parte da instituição de utilizar essa ferramenta para evoluir academicamente
-
 
 • 🧰 **Dores do público-alvo**
 

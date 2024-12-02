@@ -55,10 +55,15 @@
 • 🧰 **Dores do público-alvo**
 
  📌 **• Necessidades**
-Material complementar para adquirir conhecimento e aprimorar o ensino
+
+• Material complementar para adquirir conhecimento e aprimorar o ensino
 
 📌 **• Desafios**
-Encontrar material complementar de qualidade e sem custo
+
+• Encontrar material complementar de qualidade e sem custo
+
+
+
 
  💡 **•Garantia de Solução**
 
@@ -66,4 +71,5 @@ Encontrar material complementar de qualidade e sem custo
 
  • Simplicidade no acesso seletivo aos conteúdos
 
+🤖 **• Resultados Esperados****
 

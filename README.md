@@ -43,7 +43,7 @@
 • Navegar de forma mais ágil para o entendimento da matéria
 
 
-**•  Identificação do público alvo**
+📁**•  Identificação do público alvo**
 
  📝 • **Quem representa o mercado**
 

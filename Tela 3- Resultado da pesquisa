@@ -19,11 +19,11 @@
         .cabecalho {
             background-color: #0d7c4d;
             color: white;
-            padding: 13px 20px; /* Diminuí o padding do cabeçalho em 1px */
+            padding: 13px 20px; 
             text-align: left;
             position: relative;
             display: flex; /* Flexbox para alinhar logo e título na mesma linha */
-            align-items: center; /* Alinha verticalmente */
+            align-items: center; /* Alinha na vertical */
         }
 
         .container-logo {

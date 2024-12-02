@@ -71,5 +71,5 @@
 
  • Simplicidade no acesso seletivo aos conteúdos
 
-🤖 **• Resultados Esperados****
+🤖 **• Resultados Esperados**
 

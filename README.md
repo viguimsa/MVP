@@ -56,10 +56,10 @@
 
 • 🧰 **Dores do público-alvo**
 
-**• Necessidades**
+ 📌 **• Necessidades**
 Material complementar para adquirir conhecimento e aprimorar o ensino
 
-**• Desafios**
+📌 **• Desafios**
 Encontrar material complementar de qualidade e sem custo
 
 

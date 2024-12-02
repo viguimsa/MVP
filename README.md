@@ -34,7 +34,7 @@
 
 📌 **• Requisitos:**
 
-• Foram atendidos a quantidade mínima e suficiente de requisitos para ilustrar o protótipo de MVP Front-End
+• Foi atendido a quantidade mínima e suficiente de requisitos para ilustrar o protótipo de MVP Front-End
 
 • Para compreensão dos requisitos é necessário levar em consideração que o projeto vai contar com 2 Bancos, sendo um banco geral de pessoas que fazem parte da instituição e um segundo com pessoas autorizadas para configurar conteúdos (administrador) onde o dado utilizado será a matrícula seja ela de aluno, docente ou administrador.
 

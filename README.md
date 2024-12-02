@@ -25,9 +25,9 @@
 
 🛠️ • **Tecnologias utilizadas:**
 
-•Html, css e javascript para a criação do projeto.
+•Html, css e javascript para a criação do projeto
 
-•GitHub, para hospedagem do repositório:
+•GitHub, para hospedagem do repositório
 
 
 • Informação de qual MVP definido: Protótipo
@@ -38,28 +38,28 @@
 
 🚀 • **Benefícios do produto**
  
-• Produto autêntico e exclusivo para acadêmicos da instituição de forma gratuita.
+• Produto autêntico e exclusivo para acadêmicos da instituição de forma gratuita
 
 •  Identificação do público alvo 
 
  📝 • **Quem representa o mercado**
 
-• Os acadêmicos que buscam conhecimento.
+• Os acadêmicos que buscam conhecimento
 
 • Garantir estratégia alinhada com necessidades
 Dores do público alvo 
 
 • Informação de objetivos e benefícios do produto:
 
-• Encontrar material complementar de qualidade e sem custo.
+• Encontrar material complementar de qualidade e sem custo
 
 • Garantia de solução
 
 • 🧰 **Dores do público-alvo**
 
-• Dificuldade no processo de cadastro de novas publicações.
+• Dificuldade no processo de cadastro de novas publicações
 
-• Exigência de diferentes níveis de acesso para gerenciar e editar conteúdo.
+• Exigência de diferentes níveis de acesso para gerenciar e editar conteúdo
 
 
 
